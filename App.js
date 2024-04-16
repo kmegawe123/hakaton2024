@@ -96,14 +96,24 @@ const ChatScreen = () => {
           }}
         >
           <View style={styles.modalContainer}>
-            <ScrollView contentContainerStyle={styles.modalContent}>
-              <TouchableOpacity onPress={() => handleCategorySelect('Psychologist')}>
-                <Text style={[styles.categoryItem, selectedCategory === 'Psychologist' && styles.selectedCategoryItem]}>Psychologist</Text>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => handleCategorySelect('Game')}>
-                <Text style={[styles.categoryItem, selectedCategory === 'Game' && styles.selectedCategoryItem]}>Game</Text>
-              </TouchableOpacity>
-            </ScrollView>
+          <ScrollView contentContainerStyle={styles.modalContent}>
+  <TouchableOpacity onPress={() => handleRoleSelect('Psychologist')}>
+    <Text style={[styles.categoryItem, selectedRole === 'Psychologist' && styles.selectedCategoryItem]}>Psychologist</Text>
+  </TouchableOpacity>
+  <TouchableOpacity onPress={() => handleRoleSelect('Game')}>
+    <Text style={[styles.categoryItem, selectedRole === 'Game' && styles.selectedCategoryItem]}>Game</Text>
+  </TouchableOpacity>
+  <TouchableOpacity onPress={() => handleRoleSelect('Teacher')}>
+    <Text style={[styles.categoryItem, selectedRole === 'Teacher' && styles.selectedCategoryItem]}>Teacher</Text>
+  </TouchableOpacity>
+  <TouchableOpacity onPress={() => handleRoleSelect('Coach')}>
+    <Text style={[styles.categoryItem, selectedRole === 'Coach' && styles.selectedCategoryItem]}>Coach</Text>
+  </TouchableOpacity>
+  <TouchableOpacity onPress={() => handleRoleSelect('Programmer')}>
+    <Text style={[styles.categoryItem, selectedRole === 'Programmer' && styles.selectedCategoryItem]}>Programmer</Text>
+  </TouchableOpacity>
+</ScrollView>
+
           </View>
         </Modal>
       </View>
